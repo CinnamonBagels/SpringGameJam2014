@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour {
 		currentDamageCD = damageCD;
 		canTakeDamage = true;
 		currentHealth = maxHealth;
+        cont = this.gameObject.GetComponent<CharacterController>();
 	}
 	
 	// Update is called once per frame
