@@ -13,10 +13,11 @@ public class Lava : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log(isColliding);
+        //Debug.Log(isColliding);
 	}
 
 	void OnCollisionEnter(Collision col) {
+        Debug.Log("Collision entered");
 		isColliding = true;
 	}
 

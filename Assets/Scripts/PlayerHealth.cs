@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		currentHealth = maxHealth;
+        cont = this.gameObject.GetComponent<CharacterController>();
 	}
 	
 	// Update is called once per frame

@@ -1,0 +1,11 @@
+E:\Ryan\My Documents\Clubs and Student Orgs\VGDC\Spring Game Jam 2014\SpringGameJam2014\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+E:\Ryan\My Documents\Clubs and Student Orgs\VGDC\Spring Game Jam 2014\SpringGameJam2014\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+E:\Ryan\My Documents\Clubs and Student Orgs\VGDC\Spring Game Jam 2014\SpringGameJam2014\Temp\bin\Debug\UnityEditor.dll
+E:\Ryan\My Documents\Clubs and Student Orgs\VGDC\Spring Game Jam 2014\SpringGameJam2014\Temp\bin\Debug\UnityEngine.dll
+E:\Ryan\My Documents\Clubs and Student Orgs\VGDC\Spring Game Jam 2014\SpringGameJam2014\Temp\bin\Debug\Mono.Cecil.dll
+E:\Ryan\My Documents\Clubs and Student Orgs\VGDC\Spring Game Jam 2014\SpringGameJam2014\Temp\bin\Debug\nunit.framework.dll
+E:\Ryan\My Documents\Clubs and Student Orgs\VGDC\Spring Game Jam 2014\SpringGameJam2014\Temp\bin\Debug\Unity.DataContract.dll
+E:\Ryan\My Documents\Clubs and Student Orgs\VGDC\Spring Game Jam 2014\SpringGameJam2014\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+E:\Ryan\My Documents\Clubs and Student Orgs\VGDC\Spring Game Jam 2014\SpringGameJam2014\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
+E:\Ryan\My Documents\Clubs and Student Orgs\VGDC\Spring Game Jam 2014\SpringGameJam2014\obj\Debug\Assembly-CSharp-firstpass.dll
+E:\Ryan\My Documents\Clubs and Student Orgs\VGDC\Spring Game Jam 2014\SpringGameJam2014\obj\Debug\Assembly-CSharp-firstpass.pdb
