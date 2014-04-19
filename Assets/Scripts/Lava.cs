@@ -16,12 +16,18 @@ public class Lava : MonoBehaviour {
 		Debug.Log(isColliding);
 	}
 
-	void OnCollisionStay(Collision col) {
+	void OnCollisionEnter(Collision col) {
+		isColliding = true;
+	}
 
+	void OnCollisionStay(Collision col) {
 		if (col.gameObject.name == "Player") {
 			var pHealth = col.gameObject.GetComponent<PlayerHealth>();
 			pHealth.dealDamage(damage);
 		}
-		isColliding = true;
+	}
+
+	void OnCollisionExit(Collision col) {
+		isColliding = false;
 	}
 }
