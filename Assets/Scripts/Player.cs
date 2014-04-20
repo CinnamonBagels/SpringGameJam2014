@@ -7,17 +7,18 @@ public class Player : MonoBehaviour {
 	public float jumpSpeed = 8.0f;
 	public float gravity = 20.0f;
 
-	//private bool isInHazard;
+	private bool isInHazard;
 	private Vector3 moveDirection = Vector3.zero;
 	private Vector3 mouseDirection = Vector3.zero;
 
 	private CharacterController controller;
 	private PlayerHealth pHealth;
+	private Lava lava;
 
 	// Use this for initialization
 	void Start () {
 
-		//isInHazard = false;
+		isInHazard = false;
 
 		controller = this.gameObject.GetComponent<CharacterController>();
 		pHealth = this.gameObject.GetComponent<PlayerHealth>();
@@ -25,9 +26,16 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		pHealth.receiveDamage(5.0f);
+
+		//Debug.Log(isInHazard);
+		//pHealth.receiveDamage(5.0f);
 
 		if (controller.isGrounded) {
+
+			this.gameObject.SendMessage("receiveDamage", 5.0f);
+
+			//Debug.Log("TRUE");
+			
 			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
 			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection *= speed;
@@ -35,6 +43,8 @@ public class Player : MonoBehaviour {
 			if (Input.GetButton("Jump")) {
 				moveDirection.y = jumpSpeed;
 			}
+		} else {
+			//Debug.Log("FALSE");
 		}
 
 
@@ -43,19 +53,8 @@ public class Player : MonoBehaviour {
 		controller.Move(moveDirection * Time.deltaTime);
 	}
 
-	//void OnCollisionEnter(Collision col) {
-	//	isInHazard = true;
-	//	if (col.gameObject.tag == "Hazard") {
-	//		isInHazard = true;
-	//	}
-	//}
-	//void OnCollisionStay(Collision col) {
-	//	isInHazard = true;
-	//}
-
-	//void OnCollisionExit(Collision col) {
-	//	isInHazard = false;
-	//}
-
-	
+	public void receiveLavaObject(Lava lavaObject) {
+		Debug.Log("HUE");
+		lava = lavaObject;
+	}
 }
