@@ -14,7 +14,6 @@ public class Lava : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.gameObject.BroadcastMessage("receiveLavaObject", this);
 	}
 
 

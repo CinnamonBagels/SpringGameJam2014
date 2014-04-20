@@ -13,7 +13,6 @@ public class Player : MonoBehaviour {
 
 	private CharacterController controller;
 	private PlayerHealth pHealth;
-	private Lava lava;
 
 	// Use this for initialization
 	void Start () {
@@ -22,19 +21,19 @@ public class Player : MonoBehaviour {
 
 		controller = this.gameObject.GetComponent<CharacterController>();
 		pHealth = this.gameObject.GetComponent<PlayerHealth>();
+
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		//Debug.Log(isInHazard);
-		//pHealth.receiveDamage(5.0f);
-
 		if (controller.isGrounded) {
 
-			this.gameObject.SendMessage("receiveDamage", 5.0f);
+			if (isInHazard) {
+				this.gameObject.SendMessage("receiveDamage", 5.0f);
+			}
 
-			//Debug.Log("TRUE");
 			
 			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
 			moveDirection = transform.TransformDirection(moveDirection);
@@ -47,14 +46,12 @@ public class Player : MonoBehaviour {
 			//Debug.Log("FALSE");
 		}
 
-
-
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
 	}
 
-	public void receiveLavaObject(Lava lavaObject) {
-		Debug.Log("HUE");
-		lava = lavaObject;
+	void OnControllerColliderHit(ControllerColliderHit hit) {
+		isInHazard = (hit.gameObject.tag == "Hazard") ? true : false;
 	}
+	
 }
