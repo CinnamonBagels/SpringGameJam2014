@@ -19,8 +19,9 @@
 *.Trashes
 
 # All platforms
-Library
-Temp
+Library/
+Temp/
+obj/
 *.csproj
 *.pidb
 *.unityproj
